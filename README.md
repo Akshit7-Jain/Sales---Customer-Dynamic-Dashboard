@@ -46,4 +46,6 @@ Vacation Planning: Tourists can plan trips based on slope availability, elevatio
 Regional Analysis: Governments and tourism bodies can analyze competitiveness by region.
 
 ### 6.	Screenshots
-Example: ![Dashboard Preview](https://github.com/the-mansi-goel/Ski-dashboard/blob/main/Snapshot%20of%20the%20Dahbaord.png)
+ ![Dashboard Preview](https://github.com/Akshit7-Jain/Sales---Customer-Dynamic-Dashboard/blob/main/Sales%20Dashboard%20(2).png)
+![Dashboard Preview]()
+
