@@ -47,5 +47,5 @@ Regional Analysis: Governments and tourism bodies can analyze competitiveness by
 
 ### 6.	Screenshots
  ![Dashboard Preview](https://github.com/Akshit7-Jain/Sales---Customer-Dynamic-Dashboard/blob/main/Sales%20Dashboard%20(2).png)
-![Dashboard Preview]()
+![Dashboard Preview](https://github.com/Akshit7-Jain/Sales---Customer-Dynamic-Dashboard/blob/main/Customer%20Dashboard.png)
 
