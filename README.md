@@ -1,49 +1,147 @@
-### Sales-Customer Dynamic Dashboard
-# Insight Analytics Interactive Dashboard 📊
-A dynamic, interactive dashboard to compare current years data with past year - focusing on categorial aspect, regioanl area and time attribute.
+# Sales & Customer Analytics Dashboard | Tableau 📊
 
-The Insight Interactive Dashboard is a visually engaging and analytical Tableau report designed to help users explore and compare over C.Y. & P.Y. data across 4 regions, 3 Category and 17 Subcategory. The dashboard focuses on highlighting major Key insights like Profit, Sales, Top Customer and Top Orders. This tool is intended for use by company, data analysts and data-driven strategists who seek to understand trends of Sales & Customer based data while comparing with last year.
+A dynamic, interactive dual-dashboard Tableau report built to help 
+sales and marketing stakeholders track, compare, and act on 
+year-over-year business performance — across KPIs, product 
+subcategories, weekly trends, and customer-level insights.
 
-The dashboard was built using the following tools and technologies:<br>
-•	📊 Power BI Desktop – Main data visualization platform used for report creation.<br>
-•	📂 Power Query – Data transformation and cleaning layer for reshaping and preparing the data.<br>
-•	🧠 DAX (Data Analysis Expressions) – Used for calculated measures, dynamic visuals, and conditional logic.<br>
-•	📝 Data Modeling – Relationships established among tables to enable cross-filtering and aggregation.<br>
-•	📁 File Format – .twbx for development and .png for dashboard previews.
+The Sales & Customer Analytics Dashboard is a visually engaging 
+analytical tool designed to give users a complete picture of business 
+performance for any selected year vs. the prior year. Powered by a 
+single **dynamic year parameter**, both dashboards update simultaneously 
+— eliminating the need to rebuild views for each reporting period. The 
+tool covers 6 core KPIs, subcategory-level profitability analysis, 
+weekly trend anomaly detection, and customer loyalty segmentation. It 
+is intended for use by sales managers, marketing strategists, and 
+data analysts who need to monitor performance and identify 
+opportunities through an interactive, self-serve interface.
 
-###	Data Source
-Source: Data with Baraa - Data Academy  
+---
 
-Data on year-on-year performance of Company, including details on their location, prices, slopes, lifts, and seasons, as well as a complementary table with the Customer Detail and region around the world for each month of 2020-2023.
+## Tools & Technologies
 
+- 📊 **Tableau Desktop** — Primary data visualization and dashboard 
+  platform
+- 🧮 **Tableau Calculated Fields** — CY/PY logic, % difference 
+  measures, Min/Max window functions, KPI avg comparisons, and LOD 
+  expressions for fixed customer-order counts
+- 🎛️ **Tableau Parameters** — A single `Select Year` parameter 
+  dynamically drives all CY and PY calculations across both dashboards
+- 📂 **Data Source** — `Sales DataSource` (single flat table embedded 
+  in the `.twbx`)
+- 📁 **File Format** — `.twbx` for development and distribution; 
+  `.png` for dashboard previews
 
-###	Features / Highlights
-•	Business Problem: - 
-Build two interactive Tableau dashboards to help sales and marketing stakeholders analyze year-over-year sales performance and customer behavior through KPIs, trends, and filterable visualizations. 
+---
 
-1. Which product subcategories are generating the most profit vs. sales this year compared to last year?
-2. Which weeks had below-average sales and profit — and is there a pattern in when performance dips?
-3. Who are the top 10 customers by profit, and how recently did they place an order?
-4. Which regions, states, or cities have the highest concentration of high-order customers?
+## Data Source
 
-•	Goal of the Dashboard
-To deliver an interactive visual tool that enable sales and marketing stakeholders to monitor, compare, and act on year-over-year sales performance and customer behavior through a single, interactive Tableau interface.
+- **Source:** Sales DataSource (CSV/extract embedded in workbook)
+- **Coverage:** Multi-year transactional sales data (selectable year 
+  range via parameter)
+- **Fields include:** Order ID, Order Date, Ship Date, Ship Mode, 
+  Customer ID, Customer Name, Segment, City, State, Region, Product 
+  ID, Product Name, Category, Sub-Category, Sales, Quantity, Discount, 
+  Profit
 
-•	Walkthrough of Key Visuals
-1. **KPI Summary Tiles** — Six individual KPI sheets (Sales, Profit, Quantity, Customers, Orders, Sales Per Customer) display current year vs. previous year values side by side, giving stakeholders an instant snapshot of performance change.
+---
 
-2. **Monthly Trend Sparklines** — Each KPI is plotted month-by-month for both years, with highest and lowest months visually highlighted — making seasonal peaks and dips immediately obvious.
+## Dashboard Views
 
-3. **Subcategory Comparison Chart** — A dual-axis bar/line chart compares sales and profit across all product sub-categories for CY vs PY, helping identify which subcategories are profitable vs. high-revenue but low-margin.
+### 1. Sales Dashboard
+Year-over-year sales performance overview:
 
-4. **Weekly Trends Chart** — Sales and profit are plotted week-by-week for the current year with an average reference line, and weeks above/below average are color-coded — useful for spotting short-term anomalies.
+- **6 KPI Summary Tiles** — Sales, Profit, Quantity, Customers, 
+  Orders, and Sales Per Customer; each showing CY value, PY value, 
+  and % difference with directional indicators
+- **Monthly Trend Sparklines** — Each KPI plotted month-by-month for 
+  CY and PY, with highest and lowest months dynamically highlighted 
+  using Min/Max window calculations
+- **Subcategory Comparison Chart** — Dual bar chart comparing CY vs. 
+  PY Sales and Profit across all product subcategories, with a legend 
+  distinguishing above/below threshold performance
+- **Weekly Trends Chart** — Sales and profit plotted week-by-week for 
+  the current year with a dynamic average reference line; weeks above 
+  and below average are color-coded for instant anomaly detection
 
-5. **Customer Distribution & Top 10 Table** — A histogram shows how customers are spread by number of orders (loyalty segmentation), while a ranked table lists the top 10 customers by profit with order count, sales, and last order date for targeted relationship management.
+### 2. Customer Dashboard
+Customer behavior and loyalty analysis:
 
-•	Business Impact & Insights
-Marketing Optimization: Company can use this dashboard to identify KPIs through key selling Products for different Category & Subcategory.
-Vacation Planning: Tourists can plan trips based on slope availability, elevation, and terrain difficulty.
-Regional Analysis: Governments and tourism bodies can analyze competitiveness by region.
+- **6 KPI Summary Tiles** — Same KPI set as Sales Dashboard, 
+  maintaining consistency across both views
+- **Customer Distribution Histogram** — Customers segmented by number 
+  of orders placed, revealing loyalty tiers and repeat purchase 
+  behavior (powered by a FIXED LOD expression)
+- **Top 10 Customers Table** — Ranked by profit, showing each 
+  customer's order count, total sales, and last order date — enabling 
+  targeted relationship management and retention strategy
+
+---
+
+## Features & Highlights
+
+**Business Problems Addressed:**
+1. Which product subcategories are generating the most profit vs. 
+   sales this year compared to last year?
+2. Which weeks had below-average sales and profit — and is there a 
+   seasonal pattern to performance dips?
+3. Who are the top 10 customers by profit, and how recently did they 
+   place an order?
+4. Which regions, states, or cities have the highest concentration of 
+   high-order customers?
+
+**Goal of the Dashboard:**
+To deliver a single, parameter-driven Tableau interface that eliminates 
+static year-specific reports — enabling stakeholders to dynamically 
+select any year and instantly compare performance against the prior 
+year across all KPIs, product lines, and customer segments.
+
+**Key Calculated Fields:**
+
+| Field | Logic |
+|---|---|
+| CY Sales / Profit / Quantity / Orders / Customers | Filter to selected parameter year |
+| PY Sales / Profit / Quantity / Orders / Customers | Filter to parameter year − 1 |
+| % Diff (all KPIs) | (CY − PY) / PY |
+| Min/Max Sales, Profit, etc. | WINDOW_MAX to highlight peak months |
+| KPI Sales Avg / Profit Avg | Above/Below WINDOW_AVG for weekly trend coloring |
+| Nr of Orders per Customers | FIXED LOD — order count per customer for histogram |
+| Current Year / Previous Year | Alias labels derived from the Select Year parameter |
+
+**Dynamic Parameter:**
+A single `Select Year` parameter (default: 2023) drives every CY and 
+PY field across both dashboards — making the entire workbook reusable 
+across any reporting period without modification.
+
+---
+
+## Business Impact
+
+- **Sales Teams** can identify which subcategories are high-revenue 
+  but low-margin, and redirect focus accordingly
+- **Marketing Teams** can pinpoint seasonal dips in weekly trends to 
+  time campaigns more effectively
+- **Account Managers** can use the Top 10 Customer table to prioritize 
+  outreach based on recency and profitability
+- **Leadership** gets an instant CY vs. PY snapshot across all core 
+  KPIs without waiting for manual reports
+
+---
+
+## File Structure
+
+Sales___Customer_Dashboards__Dynamic_.twbx
+
+├── Sales & Customer Dashboards (Dynamic).twb   # Tableau workbook
+
+└── Data/
+
+└── Sales DataSource                        # Embedded data extract
+
+---
+
+*Built with Tableau Desktop · Single-source flat table · 
+Dynamic year parameter · 2 dashboards · 15 worksheets*
 
 ### 6.	Screenshots
  ![Dashboard Preview](https://github.com/Akshit7-Jain/Sales---Customer-Dynamic-Dashboard/blob/main/Sales%20Dashboard%20(2).png)
